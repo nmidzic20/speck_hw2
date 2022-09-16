@@ -1,0 +1,163 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    /*overflow-x: hidden;*/
+}
+
+header {
+    box-sizing: border-box;
+    background-color: white;
+    position: fixed;
+    height: 80px;
+    width: 100%;
+}
+
+header div {
+    box-sizing: border-box;
+    max-width: 1280px;
+    /*Setting position "fixed" removes the element (header) from the document flow,
+    so its child div won't inherit height/width so it needs to be specified again*/
+    height: 80px;
+    width: 100%;
+    margin: 0 auto; /*centers horizontally within the specified width, won't do anything if width not specified*/
+}
+
+header div img {
+    height: 70px;
+    float: left;
+}
+
+header div nav {
+    float: right;
+    margin-top: 25px;
+    margin-right: 20px;
+}
+
+header a {
+    text-decoration: none;
+    padding: 0 20px;
+    font-weight: bold;
+    color: black;
+}
+
+header a:hover {
+    color: red;
+}
+
+#hero {
+    width: 100%;
+    height: 500px;
+    background-image: url("./images/Copy\ of\ hero.jpeg");
+    background-size: cover;
+    background-attachment: fixed; /*keep image fixed during scrolling*/
+    padding-top: 80px;
+}
+
+#overlay {
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 500px;
+    padding-top: 80px;
+}
+
+#overlay h1 {
+    box-sizing: border-box;
+    color: #e4b43c;
+    line-height: 140%;
+    width: 500px;
+    margin-bottom: 30px;
+}
+
+#overlay p {
+    box-sizing: border-box;
+    width: 800px;
+    line-height: 160%;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+#overlay h1, #overlay p {
+    max-width: 1280px;
+    margin-left: 50px;
+}
+
+#featured {
+    box-sizing: border-box;
+    max-width:  1280px;
+    padding: 80px 0;
+}
+
+#featured h2 {
+    box-sizing: border-box;
+    width: 30%;
+    margin: 0 auto;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.flex-container {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-container > div {
+    width: 350px;
+    text-align: center;
+    border-radius: 6px;
+    margin-bottom: 50px;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1); 
+}
+
+.flex-container > div:hover {
+    box-shadow: 0 5px 10px rgba(0,0,0,0.40), 0 5px 10px rgba(0,0,0,0.70);
+}
+
+.flex-container > div:nth-child(1), .flex-container > div:nth-child(2) {
+    margin-right: 50px;
+}
+
+.flex-container > div > img {
+    width: 100%;
+    height: 220px;
+}
+
+.flex-container > div > h3 {
+    margin-bottom: 10px;
+}
+
+.flex-container > div > p {
+    margin-bottom: 20px;
+}
+
+.flex-container > div > a {
+    display: block; /*potrebno dodati jer inace width osobina ne utjece na <a> koji je inline element*/
+    width: 100%;
+    line-height: 40px;
+    border: 1px solid #d33e3e;
+    border-radius: 6px;
+    background-color: #d33e3e;
+    color: #ffffff; 
+    transition: 0.3s ease-out;
+    text-decoration: none;
+}
+
+.flex-container > div > a:hover {
+    background-color: #e4b43c;
+    border-color: #e4b43c;
+    cursor: pointer;
+}
+
+footer {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 40px 0;
+    background-color: #333333;
+    color: #d0d0d0;
+    font-size: 14px;
+}
